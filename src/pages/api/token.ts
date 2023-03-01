@@ -23,7 +23,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       if ((!refresh || refresh === "false") && _tokens.find((t) => t.userId === userId)) {
         res.json({ access_token: _tokens.find((t) => t.userId === userId)?.access_token });
       } else {
-        let response = await fetch(`${process.env.WEAVY_SERVER}/api/users/${getUserName(userId)}/tokens`, {
+        let response = await fetch(`${process.env.WEAVY_URL}/api/users/${getUserName(userId)}/tokens`, {
           method: 'POST',
           headers: {
             'content-type': 'application/json',

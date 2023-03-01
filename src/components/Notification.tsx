@@ -35,7 +35,7 @@ const Notification = ({ id, text, type, entityId }: Props) => {
             var tokenResponse = await fetch(`/api/token?refresh=${refresh}`);
             var tokenJson = await tokenResponse.json();
     
-            var markResponse = await fetch(`${process.env.WEAVY_SERVER}/api/notifications/${id}/mark`, {
+            var markResponse = await fetch(`${process.env.WEAVY_URL}/api/notifications/${id}/mark`, {
                 method: 'PUT',
                 headers: {
                   'Authorization': `Bearer ${tokenJson.access_token}`,

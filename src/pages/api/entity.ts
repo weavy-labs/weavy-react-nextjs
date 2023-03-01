@@ -29,7 +29,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   // get Weavy entity
-  let response = await fetch(`${process.env.WEAVY_SERVER}/${endpoint}`, {
+  let response = await fetch(`${process.env.WEAVY_URL}/${endpoint}`, {
     method: 'GET',
     headers: {
       'Authorization': `Bearer ${process.env.WEAVY_APIKEY}`,

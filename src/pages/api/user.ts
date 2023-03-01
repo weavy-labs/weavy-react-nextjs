@@ -22,7 +22,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   })
 
   // sync some of the user data to Weavy
-  let response = await fetch(`${process.env.WEAVY_SERVER}/api/users/${getUserName(id)}`, {
+  let response = await fetch(`${process.env.WEAVY_URL}/api/users/${getUserName(id)}`, {
     method: 'PUT',
     headers: {
       'content-type': 'application/json',

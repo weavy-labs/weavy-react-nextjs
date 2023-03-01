@@ -18,7 +18,7 @@ type NotificationsProps = {
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 export const initApp = async ({ uid, name, type, userId }: AppProps) => {
-    let response = await fetch(`${process.env.WEAVY_SERVER}/api/apps/init`, {
+    let response = await fetch(`${process.env.WEAVY_URL}/api/apps/init`, {
         method: 'POST',
         headers: {
             'content-type': 'application/json',
@@ -31,7 +31,7 @@ export const initApp = async ({ uid, name, type, userId }: AppProps) => {
 }
 
 export const syncUser = async ({ id, name, email }: UserProps) => {
-    let response = await fetch(`${process.env.WEAVY_SERVER}/api/users/${getUserName(id)}`, {
+    let response = await fetch(`${process.env.WEAVY_URL}/api/users/${getUserName(id)}`, {
         method: 'PUT',
         headers: {
             'content-type': 'application/json',

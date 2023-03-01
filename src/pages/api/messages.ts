@@ -7,7 +7,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { id, text } = req.body;
 
   // post a message to Weavy
-  let response =await fetch(`${process.env.WEAVY_SERVER}/api/apps/${id}/messages`, {
+  let response =await fetch(`${process.env.WEAVY_URL}/api/apps/${id}/messages`, {
     method: 'POST',
     headers: {
         'Authorization': `Bearer ${process.env.WEAVY_APIKEY}`,

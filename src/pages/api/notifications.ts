@@ -7,7 +7,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { token, count_only } = req.query;
 
   // get Weavy notifications
-  let response = await fetch(`${process.env.WEAVY_SERVER}/api/notifications?order_by=id+desc&unread=true${(count_only != null ? "&count_only=true" : "")}`, {
+  let response = await fetch(`${process.env.WEAVY_URL}/api/notifications?order_by=id+desc&unread=true${(count_only != null ? "&count_only=true" : "")}`, {
     method: 'GET',
     headers: {
       'content-type': 'application/json',

@@ -24,7 +24,7 @@ Create a new .env file in the root folder and add the following:
 ```
 DATABASE_URL="file:./dev.db"
 NEXTAUTH_SECRET="[a secret string]"
-WEAVY_SERVER="[Url to the Weavy server]"
+WEAVY_URL="[Url to the Weavy environment]"
 WEAVY_APIKEY="[The Weavy server api key]"
 ```
 

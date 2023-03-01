@@ -20,7 +20,7 @@ export default function WeavyWrapper({ children }: Props) {
   
     useEffect(() => {
       if (status === "authenticated") {
-        let client = new WeavyClient({ url: process.env.WEAVY_SERVER ?? "", tokenFactory: getToken });
+        let client = new WeavyClient({ url: process.env.WEAVY_URL ?? "", tokenFactory: getToken });
         setClient(client);
       }
   

@@ -4,7 +4,7 @@ const nextConfig = {
   swcMinify: false,
   reactStrictMode: false,
   env: {
-    WEAVY_SERVER: process.env.WEAVY_SERVER,    
+    WEAVY_URL: process.env.WEAVY_URL,    
   },
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
