@@ -25,7 +25,7 @@ Create a new .env file in the root folder and add the following:
 DATABASE_URL="file:./dev.db"
 NEXTAUTH_SECRET="[a secret string]"
 WEAVY_URL="[Url to the Weavy environment]"
-WEAVY_APIKEY="[The Weavy server api key]"
+WEAVY_APIKEY="[The Weavy environment api key]"
 ```
 
 If you want to deploy to production, you may also need the following:
@@ -37,11 +37,6 @@ NEXTAUTH_URL_INTERNAL="[The url to the deployed site]"
 Install the packages
 ```bash
 npm install
-```
-
-Install @weavy/uikit-react
-```bash
-npm install @weavy/uikit-react
 ```
 
 Generate the Prisma client:
