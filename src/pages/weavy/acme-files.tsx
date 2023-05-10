@@ -26,7 +26,7 @@ export default function Files({uid, title}: Props) {
       </Head>
 
       <div className="contextual-app d-flex">        
-          <FilesComponent uid={uid} />        
+          <FilesComponent uid={uid} features={{ }}/>        
       </div>
     </>
   )

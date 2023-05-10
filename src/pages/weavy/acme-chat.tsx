@@ -26,7 +26,7 @@ export default function Chat({ uid, title }: Props) {
       </Head>
 
       <div className="contextual-app d-flex">        
-          <ChatComponent uid={uid} />        
+          <ChatComponent uid={uid} features={{ }} />        
       </div>
     </>
   )

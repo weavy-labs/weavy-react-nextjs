@@ -25,7 +25,7 @@ export default function Feeds({uid, title}: Props) {
       </Head>
 
       <div className="container p-4">        
-          <PostsComponent uid={uid} />        
+          <PostsComponent uid={uid} features={{ }}/>        
       </div>
     </>
   )

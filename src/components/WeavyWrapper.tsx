@@ -29,7 +29,7 @@ export default function WeavyWrapper({ children }: Props) {
     return (
       <>
         {status === "authenticated" &&
-          <WeavyProvider client={client}>        
+          <WeavyProvider client={client} options={{ }}>        
             {children}
           </WeavyProvider>
         }
