@@ -43,9 +43,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     } else {
       res.json({ message: "Could not get access token from server!" })
     }
-
   }
-
-
-
 }
