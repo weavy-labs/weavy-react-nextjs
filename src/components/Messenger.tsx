@@ -11,7 +11,7 @@ type Props = {
 
 const Messenger = ({ isOpen }: Props) => {
     return (
-        <div className={"offcanvas-end-custom settings-panel border-0 " + (isOpen ? "show" : "")} id="messenger">
+        <div className={"offcanvas-end-custom settings-panel border-0 border-start " + (isOpen ? "show" : "")} id="messenger">
             <MessengerComponent />
         </div>
     )
