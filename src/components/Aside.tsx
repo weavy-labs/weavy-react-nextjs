@@ -25,7 +25,7 @@ const Aside = () => {
 
           <Link className="nav-link" href="/examples/messageapi"><span data-feather="message-square"></span> Message API</Link>
           
-          
+          <Link className="nav-link" href="/examples/directories"><span data-feather="square"></span> Directories</Link>
         </nav>
       </div>
     </aside>

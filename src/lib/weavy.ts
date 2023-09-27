@@ -9,6 +9,7 @@ type UserProps = {
     id: string | number,
     name: string | null | undefined,
     email: string | null | undefined
+    directory?: string
 }
 
 type NotificationsProps = {

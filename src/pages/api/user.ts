@@ -6,7 +6,7 @@ import { getUserName } from '@/lib/weavy';
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { id, name, email, phone, title, admin } = req.body;
+  const { id, name, email, phone, title, admin , directory} = req.body;
 
   // update user in db
   await prisma.user.update({
@@ -28,7 +28,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       'content-type': 'application/json',
       'Authorization': `Bearer ${process.env.WEAVY_APIKEY}`
     },
-    body: JSON.stringify({ name, email, phone_number: phone })
+    body: JSON.stringify({...req.body})
   });
 
   if (response.ok) {
