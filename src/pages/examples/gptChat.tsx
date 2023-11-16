@@ -33,9 +33,7 @@ const ChatWindow = ({ messages }: ChatWindowProps) => (
 
 export default function ChatGptAPI({ username }: { username: string }) {
   const [text, setText] = useState("");
-  const [messages, setMessages] = useState<
-    { content: string; role: string }[] | []
-  >([]);
+  const [messages, setMessages] = useState<ChatWindowProps['messages']>([]);
 
   const handleSubmit = async () => {
     let tempMessageObj: ChatWindowProps["messages"] = [];
@@ -46,7 +44,7 @@ export default function ChatGptAPI({ username }: { username: string }) {
       role: "user",
     });
 
-    var messageResponse = await fetch(`/api/chatgpt`, {
+    var messageResponse = await fetch(`/api/openai`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

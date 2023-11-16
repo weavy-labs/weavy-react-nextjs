@@ -24,7 +24,7 @@ const Aside = () => {
           <h6 className="sidebar-heading px-3 mt-3 mb-1 text-muted text-uppercase">Examples</h6>
 
           <Link className="nav-link" href="/examples/messageapi"><span data-feather="message-square"></span> Message API</Link>
-          <Link className="nav-link" href="/examples/chatgptapi"><span data-feather="users"></span> ChatGPT Plugin</Link>
+          <Link className="nav-link" href="/examples/gptChat"><span data-feather="users"></span> ChatGPT Bot</Link>
         </nav>
       </div>
     </aside>

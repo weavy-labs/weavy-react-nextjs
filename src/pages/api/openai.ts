@@ -1,7 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
-
 const OPENAI_BASE_URL = "https://api.openai.com/v1";
 
 export default async function handler(
@@ -9,9 +7,6 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const { messages, username } = req.body;
-
-  console.log({ messages, username });
-  
 
   const request = await fetch(`${OPENAI_BASE_URL}/chat/completions`, {
     method: "POST",
