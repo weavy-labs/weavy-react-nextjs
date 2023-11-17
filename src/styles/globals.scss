@@ -14,7 +14,7 @@ $transition-collapse: none;
 $transition-collapse-width: none;
 $navbar-brand-font-size: 1.5rem;
 $nav-link-font-weight: 500;
-$dropdown-item-padding-y: .5rem;
+$dropdown-item-padding-y: 0.5rem;
 
 // Bring in the rest of Bootstrap (but only the styles we need)
 // configuration
@@ -68,11 +68,11 @@ $navbar-height: 4rem;
 $sidebar-width: 270px;
 
 :root,
-[data-bs-theme=light] {
+[data-bs-theme="light"] {
   --navbar-bg: #{$gray-100};
 }
 
-[data-bs-theme=dark] {
+[data-bs-theme="dark"] {
   --navbar-bg: #0d0d0d;
 }
 
@@ -81,7 +81,7 @@ $sidebar-width: 270px;
   height: $navbar-height;
 
   &.fixed-top .dropdown-menu {
-    margin-top: .825rem;
+    margin-top: 0.825rem;
     min-width: 15rem;
   }
 }
@@ -142,14 +142,41 @@ main {
     }
   }
 
-
   @include media-breakpoint-up(md) {
     border-right: $offcanvas-border-width solid $offcanvas-border-color;
   }
 }
 
+.chat-window-container {
+  width: 100%;
+}
+
+.ai-message-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+
+  .list-text-head {
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  li {
+    margin: 24px 12px;
+  }
+
+  // col:first-child {background: #FF0}
+  li:nth-child(2n) {
+    background: rgba(255, 204, 133, 0.24);
+    padding: 4px;
+    border-radius: 4px;
+  }
+}
+
 .sidebar-heading {
-  font-size: .75rem;
+  font-size: 0.75rem;
 }
 
 .feather {
@@ -159,10 +186,8 @@ main {
   vertical-align: text-bottom;
 }
 
-
 .table-users {
   table-layout: fixed;
-
 
   td:nth-child(1),
   th:nth-child(1) {
@@ -180,7 +205,6 @@ main {
     width: 2.25rem;
   }
 }
-
 
 .btn-icon {
   color: #{$navbar-light-color};
@@ -205,16 +229,12 @@ main {
   }
 }
 
-
-
-
 .theme-switcher {
-
   .feather {
     display: none;
   }
 
-  [data-bs-theme=light] & {
+  [data-bs-theme="light"] & {
     background-color: rgba(255, 204, 133, 0.24);
     color: #e5780b;
 
@@ -228,20 +248,19 @@ main {
     }
   }
 
-  [data-bs-theme=dark] & {
+  [data-bs-theme="dark"] & {
     color: #85a9ff;
-    background-color: rgba(56, 116, 255, .24);
+    background-color: rgba(56, 116, 255, 0.24);
 
     &:hover {
       color: #f5f8ff;
-      background-color: rgba(56, 116, 255, .7);
+      background-color: rgba(56, 116, 255, 0.7);
     }
 
     .feather-moon {
       display: initial;
     }
   }
-
 }
 
 .contextual-app {
@@ -253,10 +272,10 @@ h1.http {
   font-size: 12rem;
   font-weight: $font-weight-bold;
   transform: rotate(-4deg);
-  text-shadow: 1rem 1rem rgba(var(--bs-primary-rgb), .5);
+  text-shadow: 1rem 1rem rgba(var(--bs-primary-rgb), 0.5);
 }
 
-.btn-icon .badge{
+.btn-icon .badge {
   border-radius: var(--bs-badge-font-size);
   position: absolute;
   top: 0;
@@ -268,11 +287,8 @@ h1.http {
   top: 0;
   right: 0;
   background-color: var(--bs-danger);
-  color: var(--wy-on-error)
+  color: var(--wy-on-error);
 }
-
-
-
 
 .read {
   background-color: var(--bs-secondary-bg-subtle);
@@ -288,10 +304,9 @@ pre:has(code) {
   border-radius: var(--bs-border-radius);
   padding: 0.75rem 1.25rem;
   white-space: pre-wrap;
-
 }
 
-.offcanvas-end-custom {  
+.offcanvas-end-custom {
   position: fixed;
   top: 65px;
   right: 0;
@@ -300,12 +315,12 @@ pre:has(code) {
   width: 400px;
   visibility: hidden;
   max-width: 100%;
-  transform: translateX(100%);  
-  display:flex;
+  transform: translateX(100%);
+  display: flex;
   transition: transform 0.3s ease-in-out;
 }
 
-.offcanvas-end-custom.show{
+.offcanvas-end-custom.show {
   visibility: visible;
   transform: none;
 }
