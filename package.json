@@ -1,6 +1,6 @@
 {
   "name": "nextjs-react",
-  "version": "19.0.6",
+  "version": "19.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -13,7 +13,7 @@
     "@types/node": "^20.10.4",
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
-    "@weavy/uikit-react": "^19.0.6",
+    "@weavy/uikit-react": "^19.1.0",
     "bcrypt": "^5.1.1",
     "bootstrap": "^5.3.2",
     "next": "^13.1.6",
